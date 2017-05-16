@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  font-family: 'Khula', sans-serif;
 }
 
 body {
@@ -28,6 +29,13 @@ body {
   font-size: 62px;
   padding-right: 15px;
   text-align: right;
+  padding-top: 80px;
+  color: transparent;
+  text-shadow: 0 0 0 white;
+}
+
+.screen__container:focus {
+    outline: none;
 }
 
 .box {
@@ -41,7 +49,7 @@ body {
 }
 
 .orange {
-  background-color: orange;
+  background-color: #e59400;
   color: white;
 }
 

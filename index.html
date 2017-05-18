@@ -11,25 +11,25 @@
 <body>
   <section class="main" ng-controller="mainCtrl">
     <div class="screen__container" ng-model="screen_display">{{screen_display}}</div>
-    <div class="AC box">AC</div>
+    <div class="AC box" ng-click="clearAll()">AC</div>
     <div class="ABS box">+/-</div>
     <div class="percent box">%</div>
-    <div class="divide box orange">/</div>
+    <div class="divide box orange" ng-click="doOperator('/')">/</div>
     <div class="seven box" ng-click="adjustCurrentVal(7)">7</div>
     <div class="eight box" ng-click="adjustCurrentVal(8)">8</div>
     <div class="nine box" ng-click="adjustCurrentVal(9)">9</div>
-    <div class="multiply box orange">X</div>
+    <div class="multiply box orange" ng-click="doOperator('*')">X</div>
     <div class="four box" ng-click="adjustCurrentVal(4)">4</div>
     <div class="five box" ng-click="adjustCurrentVal(5)">5</div>
     <div class="six box" ng-click="adjustCurrentVal(6)">6</div>
-    <div class="subtract box orange">-</div>
+    <div class="subtract box orange" ng-click="doOperator('-')">-</div>
     <div class="one box" ng-click="adjustCurrentVal(1)">1</div>
     <div class="two box" ng-click="adjustCurrentVal(2)">2</div>
     <div class="three box" ng-click="adjustCurrentVal(3)">3</div>
-    <div class="addition box orange">+</div>
+    <div class="addition box orange" ng-click="doOperator('+')">+</div>
     <div class="zero box" ng-click="adjustCurrentVal(0)">0</div>
     <div class="period box">.</div>
-    <div class="equals box orange">=</div>
+    <div class="equals box orange" ng-click="doEquation()">=</div>
   </section>
 
 

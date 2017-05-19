@@ -23,11 +23,11 @@ angular.module('Calculator')
         $scope.operator = operator;
         $scope.currentCalc = '';
         $scope.screen_display = '';
-        console.log('------Begin');
-        console.log($scope.leftOfOperator);
-        console.log($scope.operator);
-        console.log($scope.currentCalc);
-        console.log('------End');
+        // console.log('------Begin');
+        // console.log($scope.leftOfOperator);
+        // console.log($scope.operator);
+        // console.log($scope.currentCalc);
+        // console.log('------End');
       }
 
       $scope.doEquation = function(){
@@ -49,8 +49,19 @@ angular.module('Calculator')
             $scope.currentCalc = $scope.screen_display.toString();
             break;
         }
-        console.log($scope.leftOfOperator);
       }
+
+      $scope.changeToPercent = function(){
+        $scope.screen_display = ($scope.screen_display*100) + '%';
+      }
+
+      // $scope.changeToNegative = function(){
+      //   console.log('hello');
+      //   $scope.screen_display = $scope.screen_display.split('')
+      //   $scope.screen_display.unshift('-');
+      //   $scope.screen_display = $scope.screen_display.join('');
+      //   console.log($scope.screen_display);
+      // }
 
 
     })

@@ -12,8 +12,8 @@
   <section class="main" ng-controller="mainCtrl">
     <div class="screen__container" ng-model="screen_display">{{screen_display}}</div>
     <div class="AC box" ng-click="clearAll()">AC</div>
-    <div class="ABS box">+/-</div>
-    <div class="percent box">%</div>
+    <div class="ABS box" ng-click="changeToNegative()">+/-</div>
+    <div class="percent box" ng-click="changeToPercent()">%</div>
     <div class="divide box orange" ng-click="doOperator('/')">/</div>
     <div class="seven box" ng-click="adjustCurrentVal(7)">7</div>
     <div class="eight box" ng-click="adjustCurrentVal(8)">8</div>

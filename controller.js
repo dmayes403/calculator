@@ -9,7 +9,6 @@ angular.module('Calculator')
       $scope.adjustCurrentVal = function(num){
         $scope.screen_display += num;
         $scope.currentCalc += num;
-        console.log($scope.currentCalc);
       }
 
       $scope.clearAll = function(){
@@ -35,8 +34,23 @@ angular.module('Calculator')
         switch($scope.operator){
           case '/':
             $scope.screen_display = +$scope.leftOfOperator / +$scope.currentCalc;
-            console.log($scope.total);
+            $scope.currentCalc = $scope.screen_display.toString();
+            break;
+          case '*':
+            $scope.screen_display = +$scope.leftOfOperator * +$scope.currentCalc;
+            $scope.currentCalc = $scope.screen_display.toString();
+            break;
+          case '-':
+            $scope.screen_display = +$scope.leftOfOperator - +$scope.currentCalc;
+            $scope.currentCalc = $scope.screen_display.toString();
+            break;
+          case '+':
+            $scope.screen_display = +$scope.leftOfOperator + +$scope.currentCalc;
+            $scope.currentCalc = $scope.screen_display.toString();
+            break;
         }
+        console.log($scope.leftOfOperator);
       }
+
 
     })
